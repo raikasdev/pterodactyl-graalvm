@@ -14,11 +14,7 @@ jobs:
       fail-fast: false
       matrix:
         tag:
-          - 11
           - 17
-          - 19
-          - 11-EE
-          - 17-EE
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -44,7 +40,7 @@ jobs:
         with:
           # list of Docker images to use as base name for tags
           images: |
-            ghcr.io/rikodev/pterodactyl-graalvm
+            ghcr.io/raikasdev/pterodactyl-graalvm
           # generate Docker tags based on the following events/attributes
           tags: |
             type=raw,${{ matrix.tag }}
