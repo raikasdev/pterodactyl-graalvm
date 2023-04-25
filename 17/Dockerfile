@@ -26,6 +26,7 @@ RUN apt-get update -y \
   && export PATH="/opt/java/graalvm/bin:$PATH" \
   && rm -rf /var/lib/apt/lists/* \
   && rm -rf /tmp/graalvm.tar.gz
+  && gu install -A js
 
 ENV JAVA_HOME=/opt/java/graalvm \
     PATH="/opt/java/graalvm/bin:$PATH"
